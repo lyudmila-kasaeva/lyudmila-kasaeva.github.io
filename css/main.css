@@ -195,6 +195,7 @@ a {
 .photos__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .certificates__item {
@@ -212,7 +213,6 @@ a {
 
 .photos__item {
   display: block;
-  align-items: center;
   width: 230px;
   height: 160px;
   overflow: hidden;
@@ -235,7 +235,36 @@ a {
   color: #ffffff;
 }
 
+@media (max-width: 1200px) {
+  .container,
+  .footer__inner.container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .files__box {
+    flex-direction: column;
+  }
+
+  .about__img {
+      display: none;
+  }
+
+  .about__info {
+      margin: 0;
+      width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
+  .container,
+  .footer__inner.container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
   .header-nav__list,
   .header-nav--closed .header-nav__list,
   .header-nav--expanded .header-nav__icon,
@@ -301,5 +330,32 @@ a {
     line-height: 1;
     color: #192144;
     text-transform: uppercase;
+  }
+
+  .certificates__item {
+    width: 135px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container,
+  .footer__inner.container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .files__box {
+    flex-direction: column;
+  }
+
+  .photos__item,
+  .photos__item img {
+    width: 130px;
+    height: 100px;
+  }
+
+  .blueimp-gallery>.indicator>li {
+    width: 2px;
+    height: 2px;
   }
 }
