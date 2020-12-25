@@ -15,21 +15,28 @@
 </head>
 
 <body>
-  <header class="header-nav">
-    <ul class="header-nav__list">
-      <li class="header-nav__item">
-        <a class="header-nav__link" href="#about">Об авторе</a>
-      </li>
-      <li class="header-nav__item">
-        <a class="header-nav__link" href="#files">Методическая копилка</a>
-      </li>
-      <li class="header-nav__item">
-        <a class="header-nav__link" href="#certificates">Сертификаты</a>
-      </li>
-      <li class="header-nav__item">
-        <a class="header-nav__link" href="#photos">Фотоальбом</a>
-      </li>
-    </ul>
+  <header class="header-nav header-nav--nojs header-nav--closed">
+    <span class="header-nav__title">Касаева Л.Р.</span>
+      <ul class="header-nav__list">
+        <li class="header-nav__item">
+          <a class="header-nav__link" href="#about">Об авторе</a>
+        </li>
+        <li class="header-nav__item">
+          <a class="header-nav__link" href="#files">Методическая копилка</a>
+        </li>
+        <li class="header-nav__item">
+          <a class="header-nav__link" href="#certificates">Сертификаты</a>
+        </li>
+        <li class="header-nav__item">
+          <a class="header-nav__link" href="#photos">Фотоальбом</a>
+        </li>
+      </ul>
+      
+      <button type="button" class="header-nav__toggle" aria-label="Открыть/скрыть меню">
+        <svg class="header-nav__icon" fill="#192144" width="25" height="11" viewBox="0 0 25 11">
+          <path d="M1.5 3h22c.8 0 1.5-.7 1.5-1.5S24.3 0 23.5 0h-22C.7 0 0 .7 0 1.5S.7 3 1.5 3zm22 5h-22C.7 8 0 8.7 0 9.5S.7 11 1.5 11h22c.8 0 1.5-.7 1.5-1.5S24.3 8 23.5 8z"/>
+        </svg>
+      </button>
   </header>
 
   <main>
@@ -106,7 +113,8 @@
               target="_blank">Коста Хетагуров</a>
             <a class="files__link"
               href="files/metodicheskaya-kopilka/dlya-klassnogo-rukovoditelya/khetaegkaty_kostayy_rayguyraen_bonmae.doc"
-              target="_blank"><span>Хет<span class="damga">ӕ</span>гкаты Къостайы райгуыр<span class="damga">ӕ</span>н бонм<span class="damga">ӕ</span></span></a>
+              target="_blank"><span>Хет<span class="damga">ӕ</span>гкаты Къостайы райгуыр<span class="damga">ӕ</span>н
+                бонм<span class="damga">ӕ</span></span></a>
             <a class="files__link files__link--film"
               href="files/metodicheskaya-kopilka/dlya-klassnogo-rukovoditelya/film.wmv" target="_blank">Фильм</a>
           </div>
@@ -117,7 +125,8 @@
 
           <div class="files__box">
             <a class="files__link" href="files/metodicheskaya-kopilka/dlya-rukovoditelei-MO/gom_urok_3_klas.docx"
-              target="_blank"><span>Открытый урок «Хист<span class="damga">ӕ</span>р <span class="damga">ӕ</span>м<span class="damga">ӕ</span> к<span class="damga">ӕ</span>ст<span class="damga">ӕ</span>р»</span></a>
+              target="_blank"><span>Открытый урок «Хист<span class="damga">ӕ</span>р <span class="damga">ӕ</span>м<span
+                  class="damga">ӕ</span> к<span class="damga">ӕ</span>ст<span class="damga">ӕ</span>р»</span></a>
             <a class="files__link" href="files/metodicheskaya-kopilka/dlya-rukovoditelei-MO/klassnyy_chas_dobrota.ppt"
               target="_blank">Классный час «Доброта»</a>
             <a class="files__link"
@@ -170,9 +179,6 @@
               <img src="files/sertifikaty/sertifikat_site-533763-220330.jpg" alt="Сертификат" width="400"
                 height="400" />
             </a>
-            <a class="certificates__item" href="files/sertifikaty/certificate_demografiya.jpg">
-              <img src="files/sertifikaty/certificate_demografiya.jpg" alt="Сертификат" width="400" height="400" />
-            </a>
             <a class="certificates__item" href="files/sertifikaty/Diplom_Abdul-Malik_Batazhev.jpg">
               <img src="files/sertifikaty/Diplom_Abdul-Malik_Batazhev.jpg" alt="Сертификат" width="400" height="400" />
             </a>
@@ -205,6 +211,9 @@
             </a>
             <a class="certificates__item" href="files/sertifikaty/Diplom_Zahariy_Belyh.jpg">
               <img src="files/sertifikaty/Diplom_Zahariy_Belyh.jpg" alt="Сертификат" width="400" height="400" />
+            </a>
+            <a class="certificates__item" href="files/sertifikaty/certificate_demografiya.jpg">
+              <img src="files/sertifikaty/certificate_demografiya.jpg" alt="Сертификат" width="400" height="400" />
             </a>
             <a class="certificates__item" href="files/sertifikaty/Certificate_Amina_Alborova.jpg">
               <img src="files/sertifikaty/Certificate_Amina_Alborova.jpg" alt="Сертификат" width="400" height="400" />
@@ -298,6 +307,7 @@
     }
   </script>
 
+  <script src="js/menu.js"></script>
   <script src="js/blueimp-gallery.min.js"></script>
 </body>
 

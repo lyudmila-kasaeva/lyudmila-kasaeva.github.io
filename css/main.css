@@ -71,8 +71,17 @@ a {
   background-color: #dfe3f0;
 }
 
+.header-nav--sticky {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #ffffff;
+}
+
 .header-nav__list {
   display: flex;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
@@ -98,6 +107,11 @@ a {
 .header-nav__link:hover,
 .header-nav__link:focus {
   color: #029102;
+}
+
+.header-nav__toggle,
+.header-nav__title {
+  display: none;
 }
 
 .about {
@@ -186,8 +200,8 @@ a {
 .certificates__item {
   display: flex;
   align-items: center;
-  width: 230px;
-  height: 320px;
+  width: 190px;
+  height: auto;
   overflow: hidden;
   margin: 0 5px 10px 5px;
 }
@@ -219,4 +233,73 @@ a {
   min-height: 40px;
   padding: 10px 0;
   color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .header-nav__list,
+  .header-nav--closed .header-nav__list,
+  .header-nav--expanded .header-nav__icon,
+  .header-nav--nojs .header-nav__toggle {
+    display: none;
+  }
+
+  .header-nav--sticky:not(.header-nav--nojs) {
+    position: fixed;
+  }
+
+  .header-nav--nojs {
+    position: relative;
+    display: block;
+  }
+
+  .header-nav--nojs,
+  .header-nav--expanded {
+    background-color: #fff;
+  }
+
+  .header-nav--nojs .header-nav__list,
+  .header-nav--expanded .header-nav__list {
+    display: block;
+    margin-top: 40px;
+  }
+
+  .header-nav--nojs .header-nav__item,
+  .header-nav--expanded .header-nav__item {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .header-nav--nojs .header-nav__link,
+  .header-nav--expanded .header-nav__link {
+    font-size: 24px;
+  }
+
+  .header-nav__toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .header-nav--expanded .header-nav__toggle {
+    background-image: url('../img/menu-close.svg');
+    background-size: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .header-nav__title {
+    display: block;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+    color: #192144;
+    text-transform: uppercase;
+  }
 }
